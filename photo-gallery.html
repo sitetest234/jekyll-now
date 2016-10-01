@@ -9,12 +9,9 @@ images:
     title: Золотая осень
 ---
 
-
-
-
 <div class="photo-gallery row">
-  {% for image in site.photo_gallery %}
-    <div class="col-xs-6 col-md-6">
+  {% for image in page.images %}
+  <div class="col-xs-6 col-md-6">
     <a href="#" class="thumbnail">
       <img src="{{ image.image_path }}" alt="{{ image.title}}"/>
     </a>
