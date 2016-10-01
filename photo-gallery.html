@@ -3,16 +3,19 @@ layout: default
 images:
   - image_path: /gallery/kartiny-lesa-medvedi-ivan-shishkin.jpg
     title: Мишки в лесу
+    link:
   - image_path: /gallery/ships-painting.jpg
     title: Кораблики
+    link:
   - image_path: /gallery/81562_gallery.world.jpg
     title: Золотая осень
+    link: /gallery_pages/image1.html
 ---
 
 <div class="photo-gallery row">
   {% for image in page.images %}
   <div class="col-xs-6 col-md-6">
-    <a href="#" class="thumbnail">
+    <a href="{{ image.link }}" class="thumbnail">
       <img src="{{ image.image_path }}" alt="{{ image.title}}"/>
     </a>
   </div>
